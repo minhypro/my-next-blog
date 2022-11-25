@@ -23,7 +23,8 @@ function index({blogs}: Props) {
 
 
 export async function getStaticProps() {
-  const dummyPosts = getAllBlogs();
+  const dummyPosts = await getAllBlogs();
+  
   return {
     props: {
       blogs: dummyPosts

@@ -1,9 +1,10 @@
 import DUMMY_POSTS from './dummyBlogs';
 
-export function getAllBlogs() {
+export async function getAllBlogs() {
   return DUMMY_POSTS;
 }
 
-export function getSpecificBlog(slug: string) {
-  return DUMMY_POSTS.find((post) => post.slug === slug);
+export async function getSpecificBlog(slug: string) {
+  const result = DUMMY_POSTS.find((post) => post.slug === slug)
+  return result;
 }
