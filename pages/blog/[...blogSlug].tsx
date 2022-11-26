@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 import BlogDetails from '../../components/Blog/BlogDetails';
 import { getAllBlogs, getSpecificBlog } from '../../ultils/getBlogHandlers';
 import NotFound from '../404';
-import { BlogTypes } from '../../ultils/globalTypes';
+import { BlogTypes } from '../../types/globalTypes';
 import { GetStaticProps } from 'next/types';
 
 type Props = {

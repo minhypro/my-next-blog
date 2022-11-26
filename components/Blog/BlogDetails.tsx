@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { BlogTypes } from '../../ultils/globalTypes';
+import { BlogTypes } from '../../types/globalTypes';
 
 function BlogDetails({title, slug, excerpt }: BlogTypes) {
   return (

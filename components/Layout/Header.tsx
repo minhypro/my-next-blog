@@ -9,8 +9,6 @@ type menuItemType = {
 function Header() {
   const menuItems: menuItemType[] = [
     { name: 'Blog', link: '/blog' },
-    { name: 'Vlog', link: '/vlog' },
-    { name: 'Category', link: '/category' },
     { name: 'About', link: '/about' },
   ];
 

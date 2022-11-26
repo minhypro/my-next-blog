@@ -6,7 +6,9 @@ type Props = {};
 function NewBlog({}: Props) {
   return (
     <Layout>
-      <div>NewBlog</div>
+      <div>
+        
+      </div>
     </Layout>
   );
 }

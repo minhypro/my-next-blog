@@ -1,4 +1,4 @@
-export type ServerSideContext = {
+type ServerSideContext = {
   params: any;
   req: any;
   res: any;

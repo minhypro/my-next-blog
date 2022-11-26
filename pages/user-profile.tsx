@@ -1,5 +1,4 @@
 import { GetStaticPropsResult, InferGetStaticPropsType } from 'next';
-import { ServerSideContext } from '../globalTypes/PageTypes';
 
 type Props = {
   username: string;

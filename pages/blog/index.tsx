@@ -2,14 +2,13 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import BlogPreview from '../../components/Blog/BlogPreview';
 import { getAllBlogs } from '../../ultils/getBlogHandlers';
-import { BlogTypes } from '../../ultils/globalTypes'
+import { BlogTypes } from '../../types/globalTypes'
 
 type Props = {
   blogs: BlogTypes[]
 };
 
-function index({blogs}: Props) {
-
+export default function BlogPost({blogs}: Props) {
   return (
     <Layout>
       <div>
@@ -31,5 +30,3 @@ export async function getStaticProps() {
     }
   }
 }
-
-export default index;
