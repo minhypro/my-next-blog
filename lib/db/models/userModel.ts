@@ -5,10 +5,11 @@ const userSchema = new Schema(
     username: {
       type: String,
       required: true,
+      unique: true,
     },
     email: {
       type: String,
-      required: true,
+      required: false,
       unique: true,
     },
     password: {
@@ -17,7 +18,7 @@ const userSchema = new Schema(
     },
     displayName: {
       type: String,
-      required: true,
+      required: false,
     },
     role: {
       type: String,

@@ -1,5 +1,5 @@
 const apiConfig = {
-    baseUrl: `https://jsonplaceholder.typicode.com`,
+    baseUrl: `/api`,
     // apiKey: process.env.API_KEY,
     apiKey: 'minhpro',
     
