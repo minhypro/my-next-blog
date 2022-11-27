@@ -3,10 +3,11 @@ import Image from 'next/image';
 import Layout from '../components/Layout';
 import useSWR from 'swr';
 import fetcher from '../lib/api/swr/fetcher';
-import clientPromise from '../lib/db/mongodb';
+import connectMongo from '../lib/db/mongodb'
+import Blog from '../lib/db/models/blogModel';
 
 type HomeProps = {
-  featuredBlogs: string;
+  featuredBlogs: any;
 }
 
 export default function HomePage({featuredBlogs}: HomeProps) {
@@ -28,13 +29,12 @@ export default function HomePage({featuredBlogs}: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const client = await clientPromise;
-  const db = client.db(process.env.MONGODB_DB);
-  const blogs = await db.collection('blogs').find({}).limit(10).toArray();
+  await connectMongo()
+  const blogs = await Blog.find({}).select('-_id')
 
   return {
     props: {
-      featuredBlogs: JSON.stringify(blogs),
+      featuredBlogs: JSON.stringify(blogs)
     },
   };
 }
